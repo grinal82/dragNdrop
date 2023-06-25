@@ -37,8 +37,6 @@
     padding: 10px;
     transition: .3s all ease;
     border-radius: 3px;
-    
-    /* position: relative; */
 }
 
 .boards__item:first-child {
@@ -59,6 +57,7 @@
 }
 
 .list__item {
+    position: relative;
     background-color: #fefefe;
     border-radius: 5px;
     padding: 10px;
@@ -71,9 +70,27 @@
     border: none;
 }
 
+
+.delete-icon {
+    position: absolute;
+    display: none;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    transition: all .3s ease-out;
+}
+
+.delete-icon:hover {
+    color: red;
+    box-shadow: #213e4f;
+    cursor: pointer;
+    font-size: 22px;
+}
+
 .form {
     border-radius: 5px;
     margin-top: auto;
+    display: none;
 }
 
 .textarea {
@@ -144,123 +161,6 @@ span {
     color: white;
 }
 
-/* .header {
-    text-align: center;
-    color: #ffffff;
-    margin-top: 50px;
+.draggable.dragging {
+    opacity: .5;
 }
-
-#tasks {
-    display: flex;
-    margin-top: 5%;
-    justify-content: center;
-}
-
-.column-name {
-    font-weight: 700;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.column {
-    width: 250px;
-    padding: 15px;
-    border: 1px solid darkgray;
-    border-radius: 5px;
-    background-color: #dee2e5;
-}
-
-.column:nth-child(n+1) {
-    margin-left: 10px;
-}
-
-.item-task {
-    border: 1px solid gray;
-    border-radius: 5px;
-    width: 100%;
-    padding: 10px;
-    padding-right: 30px;
-    margin-bottom: 15px;
-    cursor: url('../img/grabbing.png'), default;
-    position: relative;
-    background-color: rgba(255, 255, 255, .6);
-}
-
-.item-task:hover>.delete-task {
-    display: block;
-}
-
-.item-task:last-child {
-    margin-bottom: 0;
-}
-
-.delete-task {
-    width: 25px;
-    height: 25px;
-    top: 5px;
-    right: 5px;
-    position: absolute;
-    text-align: center;
-    cursor: pointer;
-    background-image: url('../img/delete.png');
-    background-position: center;
-}
-
-.delete-task:hover {
-    background-image: url('../img/delete-hover.png');
-}
-
-.column-tasks {
-    min-height: 15px;
-}
-
-/* .dragged {
-    position: absolute;
-    z-index: 999;
-    pointer-events: none;
-    background-color: #ffffff;
-    cursor: grabbing;
-} */
-
-#text-task {
-    width: 100%;
-    border: 1px solid darkblue;
-    margin-bottom: 5px;
-    padding: 10px;
-    resize: none;
-}
-
-.add-task,
-.input-task {
-    margin-top: 10px;
-    padding: 5px 0;
-}
-
-.add-task:hover {
-    color: green;
-}
-
-.add-task-hidden:hover {
-    color: green;
-}
-
-.add-task-hidden {
-    cursor: pointer;
-}
-
-.cancel-task-hidden {
-    float: right;
-    cursor: pointer;
-}
-
-.cancel-task-hidden:hover {
-    color: gray;
-}
-
-.button {
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-} */
